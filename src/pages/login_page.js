@@ -16,7 +16,7 @@ class LoginPage {
     get loginBtn() { return $("button[type='submit']"); }
 
     //Error message
-    get errorMsg() { return $('//*[@id="flash"]'); }
+    get errorMsg() { return $('//div[@class="flash error"]'); }
 
     /* ---------------- WEB ELEMENTS - END ---------------- */
 
@@ -38,7 +38,7 @@ class LoginPage {
     /** Get a text from the error message **/
     getErrorMessage(){
         this.errorMsg.waitForDisplayed({ timeout: 3000 });
-        return this.errorMsg.getText().trim().replace(/\r?\n|\r/,"");
+        return this.errorMsg.getText().trim().replace(/\r?\n×/,"");
     }
 
     /* ---------------- METHODS TO GET AND SET A TEXT - END ---------------------- */

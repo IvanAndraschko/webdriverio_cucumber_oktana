@@ -19,7 +19,7 @@ Feature: The internet herokuapp
 		Then User gets an error message saying "<error>"
 
 		Examples:
-		|username 		|password 				|error 	|
+		|username 		|password 				|error 					  |
 		| 				| 						|Your username is invalid!|
 		|tomsmith 		|						|Your password is invalid!|
 		|				|SuperSecretPassword! 	|Your username is invalid!|

@@ -18,7 +18,7 @@ class SecureArePage {
     /** Get a text from the Success message **/
     getSuccessMsg(){
         this.successMsg.waitForDisplayed({ timeout: 3000 });
-        return this.successMsg.getText().trim().replace(/\r?\n|\r/,"");
+        return this.successMsg.getText().trim().replace(/\r?\n×/,"");
     }
 
     /* ---------------- METHODS TO GET AND SET A TEXT - END ---------------------- */
