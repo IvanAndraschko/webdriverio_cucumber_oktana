@@ -1,9 +1,11 @@
 Feature: The internet herokuapp
 
+	# Background can contain one or more Given steps, which are run before each scenario
 	Background: The-internet page access
 		Given User goes to the-internet page via URL
 		And A user is on the-internet page
 
+	# If you don't use Background you can set the steps within each scenario
 	Scenario: Login > correct username and password
 		# Given User goes to the-internet page via URL
 		# And A user is on the-internet page
