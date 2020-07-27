@@ -1,8 +1,12 @@
 Feature: The internet herokuapp
 
-	Scenario: Login > correct username and password
+	Background: The-internet page access
 		Given User goes to the-internet page via URL
 		And A user is on the-internet page
+
+	Scenario: Login > correct username and password
+		# Given User goes to the-internet page via URL
+		# And A user is on the-internet page
 		When Goes to the login page via URL
 		Then A user is on login page
 		When Tries to log in with the username "tomsmith" and password "SuperSecretPassword!"
@@ -11,8 +15,8 @@ Feature: The internet herokuapp
 
 	# @Skip
 	Scenario Outline: Login > wrong username and/or password
-		Given User goes to the-internet page via URL
-		And A user is on the-internet page
+		# Given User goes to the-internet page via URL
+		# And A user is on the-internet page
 		When Goes to the login page via URL
 		Then A user is on login page
 		When Tries to log in with the username "<username>" and password "<password>"
